@@ -4,7 +4,7 @@
 <view class='container'>
   <image class='user-icon' src='/images/icon.png'></image>
   <text class='user-name'>hello，小银银</text>
-  <view>
+  <view class='moto-container'>
     <text class='moto'>开启小程序之旅</text>
   </view>
 </view>
