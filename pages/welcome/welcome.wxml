@@ -1,0 +1,10 @@
+<!-- wxml是编写小程序骨架的文件 -->
+<!-- <view>标签与html中的 <div>标签一样起到一个容器的作用，同时可以去分割不同文档的部分 -->
+<!-- 只有被<text>包围的文字在小程序中才能被长按选中 -->
+<view class='container'>
+  <image class='user-icon' src='/images/icon.png'></image>
+  <text class='user-name'>hello，小银银</text>
+  <view>
+    <text class='moto'>开启小程序之旅</text>
+  </view>
+</view>
