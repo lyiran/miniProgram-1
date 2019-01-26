@@ -1,0 +1,8 @@
+.slide-bar {
+  width: 100%;
+  height: 566rpx;
+}
+.slide-img {
+  width: 100%;
+  height: 566rpx;
+}
