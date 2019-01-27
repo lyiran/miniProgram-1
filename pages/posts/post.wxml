@@ -12,16 +12,16 @@
   </swiper>
   <view>
     <view>
-      <image src=""></image>
-      <text></text>
+      <image src="/images/avatar/1.png"></image>
+      <text>Nov 25 2016</text>
     </view>
-    <text></text>
-    <image src=""></image>
-    <text></text>
+    <text>正是虾肥蟹壮时</text>
+    <image src="/images/post/crab.png"></image>
+    <text>小程序根目录下的 app.json 文件用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置多 tab 等。</text>
     <view>
-      <image src=""></image>
+      <image src="../../images/icon/chat.png"></image>
       <text></text>
-      <image src=""></image>
+      <image src="../../images/icon/view.png"></image>
       <text></text>
     </view>
   </view>
