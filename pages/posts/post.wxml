@@ -10,19 +10,35 @@
     <image class='slide-img' src='/images/post/iqiyi.png'></image>
   </swiper-item>
   </swiper>
-  <view>
-    <view>
-      <image src="/images/avatar/1.png"></image>
-      <text>Nov 25 2016</text>
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <image class='post-author' src="/images/avatar/1.png"></image>
+      <text class='post-date'>Nov 25 2016</text>
     </view>
-    <text>正是虾肥蟹壮时</text>
-    <image src="/images/post/crab.png"></image>
-    <text>小程序根目录下的 app.json 文件用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置多 tab 等。</text>
-    <view>
-      <image src="../../images/icon/chat.png"></image>
-      <text></text>
-      <image src="../../images/icon/view.png"></image>
-      <text></text>
+    <text class='post-title'>正是虾肥蟹壮时</text>
+    <image class='post-image' src="/images/post/crab.png"></image>
+    <text class='post-content'>小程序根目录下的 app.json 文件用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置多 tab 等。</text>
+    <view class='post-like'>
+      <image class='post-like-image' src="../../images/icon/chat.png"></image>
+      <text class='post-like-font'>92</text>
+      <image class='post-like-image' src="../../images/icon/view.png"></image>
+      <text class='post-like-font'>65</text>
+    </view>
+  </view>
+
+  <view class='post-container'>
+    <view class='post-author-date'>
+      <image class='post-author' src="/images/avatar/2.png"></image>
+      <text class='post-date'>Fer 25 2016</text>
+    </view>
+    <text class='post-title'>好看的电影</text>
+    <image class='post-image' src="/images/post/bl.png"></image>
+    <text class='post-content'>自动补全本质上和代码片段类似，不过是在特殊场合下以你的键入做为启发式信息提供最有可能要输入的建议，我常用的自动补全工具有：</text>
+    <view class='post-like'>
+      <image class='post-like-image' src="../../images/icon/chat.png"></image>
+      <text class='post-like-font'>92</text>
+      <image class='post-like-image' src="../../images/icon/view.png"></image>
+      <text class='post-like-font'>65</text>
     </view>
   </view>
 </view>
