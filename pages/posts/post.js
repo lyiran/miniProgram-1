@@ -3,8 +3,13 @@ Page({
   /**
    * 页面的初始数据
    */
+ 
   data: {
 
+  },
+  imgPath: "/images/...",
+  process: function () {
+    var date = "Nov 16 2018"
   },
 
   /**
