@@ -1,5 +1,5 @@
 <view>
-  <swiper class='slide-bar' indicator-dots="true" autoplay="true" interval="5000">
+  <swiper class='slide-bar' vertical='{{ true }}' indicator-dots=" {{ true }}" autoplay="{{ true }}" interval="5000">
   <swiper-item>
     <image class='slide-img' src='/images/post/wx.png'></image>
   </swiper-item>
@@ -10,35 +10,22 @@
     <image class='slide-img' src='/images/post/iqiyi.png'></image>
   </swiper-item>
   </swiper>
-  <view class='post-container'>
-    <view class='post-author-date'>
-      <image class='post-author' src="/images/avatar/1.png"></image>
-      <text class='post-date'>Nov 25 2016</text>
-    </view>
-    <text class='post-title'>正是虾肥蟹壮时</text>
-    <image class='post-image' src="/images/post/crab.png"></image>
-    <text class='post-content'>小程序根目录下的 app.json 文件用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置多 tab 等。</text>
-    <view class='post-like'>
-      <image class='post-like-image' src="../../images/icon/chat.png"></image>
-      <text class='post-like-font'>92</text>
-      <image class='post-like-image' src="../../images/icon/view.png"></image>
-      <text class='post-like-font'>65</text>
-    </view>
-  </view>
-
-  <view class='post-container'>
-    <view class='post-author-date'>
-      <image class='post-author' src="/images/avatar/2.png"></image>
-      <text class='post-date'>Fer 25 2016</text>
-    </view>
-    <text class='post-title'>好看的电影</text>
-    <image class='post-image' src="/images/post/bl.png"></image>
-    <text class='post-content'>自动补全本质上和代码片段类似，不过是在特殊场合下以你的键入做为启发式信息提供最有可能要输入的建议，我常用的自动补全工具有：</text>
-    <view class='post-like'>
-      <image class='post-like-image' src="../../images/icon/chat.png"></image>
-      <text class='post-like-font'>92</text>
-      <image class='post-like-image' src="../../images/icon/view.png"></image>
-      <text class='post-like-font'>65</text>
-    </view>
-  </view>
 </view>
+
+  <block wx:for="{{ posts_content }}" wx:key="unique" wx:for-item="item">
+    <view class='post-container'>
+      <view class='post-author-date'>
+        <image class='post-author' src="{{item.author_img}}"></image>
+        <text class='post-date'>{{item.date}}</text>
+      </view>
+      <text class='post-title'>{{item.title}}</text>
+      <image class='post-image' src="{{item.post_img}}"></image>
+      <text class='post-content'>{{item.content}}</text>
+      <view class='post-like'>
+        <image class='post-like-image' src="../../images/icon/chat.png"></image>
+        <text class='post-like-font'>{{item.collect_num}}</text>
+        <image class='post-like-image' src="../../images/icon/view.png"></image>
+        <text class='post-like-font'>{{item.view_num}}</text>
+      </view>
+    </view>
+  </block>
