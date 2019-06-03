@@ -1,1 +1,19 @@
-<text>这是文章详情页面</text>
+<!-- 先静后动，先样式再数据 -->
+<view class="container">
+  <image class="head-image" src="/images/post/sls.jpg"></image>
+  <view class='author-date'>
+    <image src="/images/avatar/2.png"></image>
+    <text>胡歌</text>
+    <text>发表于</text>
+    <text>三天前</text>
+  </view>
+  <text>炉石传说好玩吗？</text>
+  <view>
+    <view>
+      <image src="/images/icon/collection.png"></image>
+      <image src="/images/icon/share.png"></image>
+    </view>
+    <view></view>
+  </view>
+  <text>炉石传说好玩吗？当然，听说很好玩。</text>
+</view>
