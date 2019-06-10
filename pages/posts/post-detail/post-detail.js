@@ -6,6 +6,7 @@ Page({
   },
   onLoad:function(option) {
     var postId = option.id;
+    this.data.currentPostId = postId;
     var postData = postsData.postList[postId];
     // 如果在onLoad方法中，不是异步的去执行一个数据绑定
     // 则不需要使用this.setData方法
@@ -16,9 +17,10 @@ Page({
     });
 
     var postsCollected = wx.getStorageSync("posts_collected");
+
     if (postsCollected) {
-      var postCollected = postsCollected[postId]
-      if (postcollected) {
+      var postCollected = postsCollected[postId];
+      if (postCollected) {
         this.setData({
           collected: postCollected
         })
@@ -30,11 +32,23 @@ Page({
       wx.setStorageSync("posts_collected", postsCollected);
     }
   },
+
   onCollectionTap:function(event) {
-    var game = wx.getStorageSync('key');
-    console.log(game);
-  },
-  onShareTap:function(event) {
-    wx.removeStorageSync("key");
+    var postsCollected = wx.getStorageSync("posts_collected");
+    var postCollected = postsCollected[this.data.currentPostId];
+    // 收藏变成未收藏，未收藏变成收藏
+    postCollected = !postCollected;
+    postsCollected[this.data.currentPostId] = postCollected;
+    // 更新文章是否的缓存值
+    wx.setStorageSync("posts_collected", postsCollected);
+    // 更新数据绑定变量，从而实现切换图片
+    this.setData({
+      collected: postCollected
+    })
+    wx.showToast({
+      title: postCollected ? "收藏成功" : "取消收藏",
+      duration: 1000,
+      icon: "success"
+    })
   }
 })
