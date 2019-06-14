@@ -1,8 +1,8 @@
 var postsData = require('../../../data/posts-data.js');
-
+var app = getApp();
 Page({
   data: {
-
+    isPlayingMusic: false
   },
   onLoad:function(option) {
     var postId = option.id;
@@ -34,6 +34,29 @@ Page({
   },
 
   onCollectionTap:function(event) {
+    this.getPostsCollectedSyc();
+    // this.getPostsCollectedAsy();
+  },
+
+  // 定义异步方法
+  getPostsCollectedAsy:function() {
+    var that = this;
+    wx.getStorage({
+      key: "posts_collected",
+      success: function (res) {
+        var postsCollected = res.data;
+        var postCollected = postsCollected[that.data.currentPostId];
+        // 收藏变成未收藏，未收藏变成收藏
+        postCollected = !postCollected;
+        postsCollected[that.data.currentPostId] = postCollected;
+        that.showToast(postsCollected, postCollected);
+      }
+    })
+    
+  },
+
+  // 定义同步方法
+  getPostsCollectedSyc:function() {
     var postsCollected = wx.getStorageSync("posts_collected");
     var postCollected = postsCollected[this.data.currentPostId];
     // 收藏变成未收藏，未收藏变成收藏
@@ -96,5 +119,28 @@ Page({
         })
       }
     })
+  },
+
+  onMusicTap:function(event) {
+    var currentPostId = this.data.currentPostId;
+    var isPlayingMusic = this.data.isPlayingMusic;
+    var postData = postsData.postList[currentPostId];
+    if (isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    }
+    else {
+      wx.playBackgroundAudio({
+        dataUrl: postData.music.url,
+        title: postData.music.title,
+        coverImgUrl: postData.music.coverImg
+      });
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
+   
   }
 })

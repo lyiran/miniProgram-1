@@ -13,8 +13,8 @@ var local_database = [
     author: "林白衣",
     dateTime: "24小时前",
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=142604.mp3",
-      title: "夜夜夜夜-齐秦",
+      url: "http://www.ytmp3.cn/down/33626.mp3",
+      title: "来着天堂的魔鬼-G.E.M.邓紫棋",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000"
     }
   },
