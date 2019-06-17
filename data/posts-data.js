@@ -32,8 +32,8 @@ var local_database = [
     detail: "一 “李安是一位绝不会重复自己的导演，本片将极富原创性”李安众所瞩目的新片《比利林恩漫长的中场休息》，正式更名《半场无战事》。预告片首次曝光后，被视作是明年奥斯卡种子选手。该片根据同名畅销书改编。原著小说荣获美国国家图书奖。也被BBC评为21世纪最伟大的12本英文小说之一。影片讲述一位19岁德州男孩的比利·林恩入伍参加伊战，在一次交火中他大难不死，意外与战友成为大众的关注焦点，并被塑造成英雄。之后他们返回国内，在橄榄球赛中场休息时授勋。这名战争英雄却面临前所未有的心灵煎熬……李安为什么选中这部电影来拍？因为李安想要挑战前所未有的技术难题：以120帧每秒的速度、4K、3D技术全面结合，来掀起一场电影视觉革命。什么意思？所谓“电影是24格每秒的谎言”，其中的24格，就是帧数。",
     collection: '112',
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=108220.mp3",
-      title: "鬼迷心窍-李宗盛",
+      url: "http://www.170mv.com/kw/other.web.nm01.sycdn.kuwo.cn/resource/n2/55/10/3537230777.mp3",
+      title: "期待爱-林俊杰",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000002xOmp62kqSic.jpg?max_age=2592000"
     }
   },
@@ -51,8 +51,8 @@ var local_database = [
     postId: 2,
     avatar: "/images/avatar/3.png",
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=27538254.mp3",
-      title: "女儿情-万晓利",
+      url: "http://sp.sycdn.kuwo.cn/af7e9b97838abee021aa070b4236a405/5d047810/resource/n1/38/85/291615858.mp3",
+      title: "溯-马吟吟",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000004Wv5BO30pPc0.jpg?max_age=2592000"
     }
   },
@@ -70,8 +70,8 @@ var local_database = [
     postId: 3,
     avatar: "/images/avatar/5.png",
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=108119.mp3",
-      title: "恋恋风尘-老狼",
+      url: "http://dl.stream.qqmusic.qq.com/M5000040ZKt52jxJ6Y.mp3?vkey=0EBBF48831294ECE3D35EB258923995623196C3F8B10DA99E3F9EEBF0D5CCA4B096AEC545F93EB47823B77D4CC342ECEA9193327BE88551D&guid=5150825362&fromtag=1",
+      title: "如果的事-范玮琪",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001VaXQX1Z1Imq.jpg?max_age=2592000",
     }
   },
@@ -89,8 +89,8 @@ var local_database = [
     postId: 4,
     avatar: "../../../images/avatar/3.png",
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=188204.mp3",
-      title: "沉默是金-张国荣",
+      url: "http://www.ytmp3.cn/down/52500.mp3",
+      title: "红色高跟鞋-蔡健雅",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000003at0mJ2YrR2H.jpg?max_age=2592000"
     }
   },
@@ -108,8 +108,8 @@ var local_database = [
     avatar: "../../../images/avatar/5.png",
     postId: 5,
     music: {
-      url: "http://music.163.com/song/media/outer/url?id=152428.mp3",
-      title: "朋友-谭咏麟",
+      url: "http://www.ytmp3.cn/down/50491.mp3",
+      title: "年少有为-李荣浩",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000004eGsCN3SUheO.jpg?max_age=2592000"
     }
   }

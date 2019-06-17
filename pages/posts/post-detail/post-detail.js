@@ -5,6 +5,7 @@ Page({
     isPlayingMusic: false
   },
   onLoad:function(option) {
+    var globalData = app.globalData;
     var postId = option.id;
     this.data.currentPostId = postId;
     var postData = postsData.postList[postId];
@@ -31,6 +32,32 @@ Page({
       postsCollected[postId] = false;
       wx.setStorageSync("posts_collected", postsCollected);
     }
+
+    if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId === postId) {
+      this.setData({
+       isPlayingMusic: true
+      })
+    }
+    this.setMusicMonitor();
+  },
+
+  setMusicMonitor:function () {
+    // 监听音乐主控开关的开放关闭
+    var that = this;
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true
+      })
+      app.globalData.g_isPlayingMusic = true;
+      app.globalData.currentMusicPostId = that.data.currentPostId;
+    });
+    wx.onBackgroundAudioPause(function () {
+      that.setData({
+        isPlayingMusic: false
+      })
+      app.globalData.g_isPlayingMusic = false;
+      app.globalData.g_currentMusicPostId = null;
+    });
   },
 
   onCollectionTap:function(event) {
